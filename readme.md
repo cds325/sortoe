@@ -48,5 +48,91 @@ Import
 
     import "github.com/cds325/sortoe"
     
+Useage
+    
+    以整型切片（[]int）为例
+    
+    sortoe包:
+        func IntsAsc(arr []int)
+            升序快速排序
+        func IntsAscAndNoRepeat(arr []int) []int
+            升序快速排序并去除重复元素，使其唯一
+        func IntsAscByInsertion(arr []int)
+            升序插入排序
+        func IntsAscGo(arr []int, depth ...int)
+            启用 goroutine 并发的升序快速排序
+        func IntsAscPercent(arr []int) int
+            判断升序占升序降序总数百分比，可用于判断是否基本有序
+        func IntsDesc(arr []int)
+            降序快速排序
+        func IntsDescAndNoRepeat(arr []int) []int
+            降序快速排序并去除重复元素，使其唯一
+        func IntsDescByInsertion(arr []int)
+            降序插入排序
+        func IntsDescGo(arr []int, depth ...int)
+            启用 goroutine 并发的升序快速排序
+        func IntsIsAsc(arr []int) bool
+            判断是否是完全升序
+        func IntsIsAscAndUnique(arr []int) bool
+            判断是否是完全升序且所有元素唯一
+        func IntsIsDesc(arr []int) bool
+            判断是否是完全降序
+        func IntsIsDescAndUnique(arr []int) bool
+            判断是否是完全降序且所有元素唯一
+        func IntsIsFlat(arr []int) bool
+            判断是否是所有元素相等
+        func IntsReverse(arr []int)
+            使数组反转
+            
+        func AscIntsCount(arr []int, x int, noCheck ...bool) int
+            统计升序数组中某个元素的个数
+        func AscIntsDelete(arr []int, old int, count ...int) ([]int, int)
+            升序数组中删除值为 old 的元素
+        func AscIntsDeleteNoCheck(arr []int, old int, count ...int) ([]int, int)
+            升序数组中删除值为 old 的元素, 过程中不检验是否升序
+        func AscIntsHas(arr []int, x int, noCheck ...bool) bool
+            判断升序数组中是否含有值为 x 的元素
+        func AscIntsInsert(arr []int, elems ...int) []int
+            升序数组中插入元素, 并返回新的升序数组
+        func AscIntsInsertNoCheck(arr []int, elems ...int) []int
+            升序数组中插入元素, 并返回新的升序数组, 过程中不检验是否升序
+        func AscIntsNoRepeat(arr []int, noCheck ...bool) []int
+            去除升序数组中重复元素, 使元素唯一
+        func AscIntsReplace(arr []int, old, new int, count ...int) int
+            升序数组中替换元素, 并返回新的升序数组
+        func AscIntsReplaceNoCheck(arr []int, old, new int, count ...int) int
+            升序数组中替换元素, 并返回新的升序数组, 过程中不检验是否升序
+        func AscIntsSearch(arr []int, x int, noCheck ...bool) (int, int, bool)
+            升序数组中查找值为 x 的元素, 返回起始索引
+            
+        func DescIntsCount(arr []int, x int, noCheck ...bool) int
+        func DescIntsDelete(arr []int, old int, count ...int) ([]int, int)
+        func DescIntsDeleteNoCheck(arr []int, old int, count ...int) ([]int, int)
+        func DescIntsHas(arr []int, x int, noCheck ...bool) bool
+        func DescIntsInsert(arr []int, elems ...int) []int
+        func DescIntsInsertNoCheck(arr []int, elems ...int) []int
+        func DescIntsNoRepeat(arr []int, noCheck ...bool) []int
+        func DescIntsReplace(arr []int, old, new int, count ...int) int
+        func DescIntsReplaceNoCheck(arr []int, old, new int, count ...int) int
+        func DescIntsSearch(arr []int, x int, noCheck ...bool) (int, int, bool)
+        
+        func BitsCount(a int) int
+            统计整数 a 中有效 bit 位数
+        func EstimateDepth(lenth int, numCPU ...int) (depth int)
+            估算启用 goroutine 快速排序的递归深度
+            
+    sortedu包:
+        func UniqueAscIntsDelete(arr []int, elem int, noCheck ...bool) (newarr []int, existing bool)
+            升序且元素唯一的数组中删除元素
+        func UniqueAscIntsInsert(arr []int, elem int, noCheck ...bool) (newarr []int, existing bool)
+            升序且元素唯一的数组中插入元素, 返回新数组仍保持升序且元素唯一
+        func UniqueAscIntsReplace(arr []int, old, new int, noCheck ...bool) (newarr []int, oldExisting, newExisting bool)
+            升序且元素唯一的数组中替换元素, 返回新数组仍保持升序且元素唯一
+        func UniqueDescIntsDelete(arr []int, elem int, noCheck ...bool) (newarr []int, existing bool)
+        func UniqueDescIntsInsert(arr []int, elem int, noCheck ...bool) (newarr []int, existing bool)
+        func UniqueDescIntsReplace(arr []int, old, new int, noCheck ...bool) (newarr []int, oldExisting, newExisting bool)
+
+
+
 简单到不需要使用说明^_^
 
