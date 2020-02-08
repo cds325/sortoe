@@ -103,7 +103,7 @@ Useage
         func AscIntsReplaceNoCheck(arr []int, old, new int, count ...int) int
             升序数组中替换元素, 并返回新的升序数组, 过程中不检验是否升序
         func AscIntsSearch(arr []int, x int, noCheck ...bool) (int, int, bool)
-            升序数组中查找值为 x 的元素, 返回起始索引
+            升序数组中查找值为 x 的元素, 返回起始终止索引和true, 未找到返回查找结束位置和false
             
         func DescIntsCount(arr []int, x int, noCheck ...bool) int
         func DescIntsDelete(arr []int, old int, count ...int) ([]int, int)
