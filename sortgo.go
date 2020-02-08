@@ -15,14 +15,14 @@ func BitsCount(a int) int {
 	return c
 }
 
-func EstimateDepth(lenth int,numCPU ...int) int {
+func EstimateDepth(lenth int,numCPU ...int) (depth int) {
 	var numCpu int
 	if len(numCPU)>0 && numCPU[0]>0 {
 		numCpu = numCPU[0]
 	}else {
 		numCpu = runtime.NumCPU()
 	}
-	return BitsCount((numCpu-1)*BitsCount(lenth>>9)/2)
+	return  BitsCount((numCpu-1)*BitsCount(lenth>>9)/2)
 }
 
 // 整型切片升序快速排序, 允许开启 goroutine 加速排序,
